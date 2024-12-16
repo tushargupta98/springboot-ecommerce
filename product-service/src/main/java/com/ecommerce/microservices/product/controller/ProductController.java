@@ -1,6 +1,7 @@
 package com.ecommerce.microservices.product.controller;
 
 import com.ecommerce.microservices.product.dto.ProductRequest;
+import com.ecommerce.microservices.product.dto.ProductResponse;
 import com.ecommerce.microservices.product.model.Product;
 import com.ecommerce.microservices.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -23,9 +24,7 @@ public class ProductController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Product> getAllProducts(){
+    public List<ProductResponse> getAllProducts(){
         return productService.getAllProducts();
     }
-
-
 }
